@@ -4,8 +4,7 @@
     border: black;
     width: 300px;
     height: 400px;
-    display: flex;
-    flex-direction: column;
+    
 }
 
 .display {
