@@ -12,7 +12,7 @@ function subtract (num1, num2){
 }
 function genButtons () {
     const container = document.querySelector('.buttons');
-    for (let i = 3; i <= 1; i--){
+    for (let i = 3; i >= 1; i--){
         const row = document.createElement('div');
         row.classList.add('row');
 
