@@ -16,11 +16,14 @@ function genButtons () {
         const row = document.createElement('div');
         row.classList.add('row');
 
-        for (let j = 0; j < 3; j++) {
-            const button = document.createElement('div');
-            button.classList.add('button-outline');
+        for (let j = 1; j <= 3; j++) {
+            const button = document.createElement('button');
+            button.classList.add('button');
+            button.textContent = j*i;
             row.appendChild(button);
         }
         container.appendChild(row);
     }
 }
+
+genButtons()
