@@ -27,3 +27,15 @@
 .row {
     display: flex;
 }
+
+.inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
