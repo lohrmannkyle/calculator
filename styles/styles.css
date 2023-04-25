@@ -26,6 +26,8 @@
 
 .row {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .inner {
@@ -37,5 +39,5 @@
 .buttons {
     display: flex;
     flex-wrap: wrap;
-    
+
 }
