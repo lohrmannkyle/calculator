@@ -16,8 +16,7 @@
 }
 
 .button {
-    width: 10%;
-    height: 10%;
+    flex: 1;
     border: black;
     border-style: solid;
     border-width: 2px;
@@ -26,14 +25,14 @@
 
 .row {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 1;
 }
 
 .inner {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .buttons {
