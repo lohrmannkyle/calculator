@@ -1,0 +1,9 @@
+.calc-outline {
+    border-width: 2px;
+    border-style: solid;
+    border: black;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
