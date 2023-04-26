@@ -11,8 +11,8 @@ function subtract (num1, num2){
     return num1 - num2;
 }
 
-const buttons = document.querySelectorAll('.button');
+const numbers = document.querySelectorAll('#number');
 const display = document.querySelector('.display');
-buttons.forEach((button) => button.addEventListener('click', () => {
-    display.textContent += button.textContent;
+numbers.forEach((number) => button.addEventListener('click', () => {
+    display.textContent += number.textContent;
 }))
