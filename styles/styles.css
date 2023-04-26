@@ -30,7 +30,7 @@ body {
     
 }
 
-.button {
+.buttons > * {
     border: black;
     border-style: solid;
     border-width: 1px;
