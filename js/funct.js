@@ -17,15 +17,17 @@ function hideFunctionButtons(){
         functionButt.classList.toggle('hide');
     })
 }
+
+
 let operator = ''
 let operand = ''
 function addButtonListeners () {
 
     /* Even listeners for adding numbers to display */
     const display = document.querySelector('.display');
+    display.textContent = '0';
     const characters = document.querySelectorAll('#character');
     characters.forEach((character) => character.addEventListener('click', () => {
-        console.log(display.textContent)
         if (display.textContent === '0' && character.textContent === '0'){
             return;
         }
