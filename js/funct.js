@@ -71,7 +71,7 @@ function addButtonListeners () {
     const del = document.querySelector('#delete');
     del.addEventListener('click', () => {
         if (display.textContent.length > 1) {
-            if (display[-1] === '.'){
+            if (display.textContent.slice(-1) === '.'){
                 period.classList.remove('hide');
             }
             display.textContent = display.textContent.slice(0, -1);
