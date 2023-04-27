@@ -28,6 +28,9 @@ function addButtonListeners () {
         if (display.textContent === '0' && character.textContent === '0'){
             return;
         }
+        if (display.textContent === '0'){
+            textContent = '';
+        }
         display.textContent += character.textContent;
     }))
 
