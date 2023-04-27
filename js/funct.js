@@ -25,15 +25,16 @@ function addButtonListeners () {
     const display = document.querySelector('.display');
     const characters = document.querySelectorAll('#character');
     characters.forEach((character) => character.addEventListener('click', () => {
-        if (display.textContent !== '0' && character.textContent !== '0'){
-            display.textContent += character.textContent;
+        if (display.textContent === '0' && character.textContent === '0'){
+            return;
         }
+        display.textContent += character.textContent;
     }))
 
     /* Event listener for controlling '.' */
     const period = document.querySelector('#dot');
     period.addEventListener('click', () => {
-            functionButt.classList.toggle('hide');
+            functionButt.classList.add('hide');
             display.textContent += '.';
     })
 
@@ -56,8 +57,8 @@ function addButtonListeners () {
         display.textContent = '0';
         operator = '';
         operand = '';
-        functions.forEach(functionButt => functionButt.classList.toggle('hide'));
-        period.classList.toggle('hide');     
+        functions.forEach(functionButt => functionButt.classList.remove('hide'));
+        period.classList.remove('hide');     
     })
 
     /* Event listener for del button */
