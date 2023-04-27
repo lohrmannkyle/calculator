@@ -70,10 +70,10 @@ function addButtonListeners () {
     /* Event listener for del button */
     const del = document.querySelector('#delete');
     del.addEventListener('click', () => {
-        if (display.textContent.length > 1) {
-            if (display.textContent.slice(-1) === '.'){
-                period.classList.remove('hide');
-            }
+        if (display.textContent.slice(-1) === '.'){
+            period.classList.remove('hide');
+        }
+        if (display.textContent.length >= 1) {
             display.textContent = display.textContent.slice(0, -1);
         }
         else {
