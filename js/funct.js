@@ -14,7 +14,7 @@ function subtract (num1, num2){
 function hideFunctionButtons(){
     const functions = document.querySelectorAll('#function');
     functions.forEach((functionButt) => {
-        functionButt.classList.toggle('hide');
+        functionButt.classList.add('hide');
     })
 }
 
@@ -73,11 +73,46 @@ function addButtonListeners () {
         if (display.textContent.slice(-1) === '.'){
             period.classList.remove('hide');
         }
-        if (display.textContent.length >= 1) {
+        if (display.textContent.length > 1) {
             display.textContent = display.textContent.slice(0, -1);
         }
         else {
             display.textContent = 0;
+        }
+    })
+
+    function reset(){
+        operand = '';
+        operator = '';
+    }
+
+    /* Event listener for solve function */
+    const solve = document.querySelector('#solve');
+    solve.addEventListener('click', () => {
+        if (operator === '') {
+            return;
+        }
+        functions.classList.remove('hide');
+        switch (operand){
+            case '+':
+                display.textContent = add(operator, display.textContent);
+                reset();
+                break;
+
+            case '-':
+                display.textContent = subtract(operator, display.textContent);
+                reset();
+                break;
+
+            case '*':
+                display.textContent = multiply(operator, display.textContent);
+                reset();
+                break;
+
+            case '/':
+                display.textContent = divide(operator, display.textContent);
+                reset();
+                break;
         }
     })
 }
