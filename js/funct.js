@@ -29,7 +29,7 @@ function addButtonListeners () {
     display.textContent = '0';
     const characters = document.querySelectorAll('#character');
     characters.forEach((character) => character.addEventListener('click', () => {
-        if (display.textContent === '0' && character.textContent === '0'){
+        if (display.textContent == '0' && character.textContent == '0'){
             return;
         }
         if (display.textContent === '0'){
