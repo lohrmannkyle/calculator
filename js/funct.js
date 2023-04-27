@@ -29,7 +29,7 @@ function addButtonListeners () {
             return;
         }
         if (display.textContent === '0'){
-            textContent = '';
+            display.textContent = '';
         }
         display.textContent += character.textContent;
     }))
@@ -37,7 +37,7 @@ function addButtonListeners () {
     /* Event listener for controlling '.' */
     const period = document.querySelector('#dot');
     period.addEventListener('click', () => {
-            functionButt.classList.add('hide');
+            period.classList.add('hide');
             display.textContent += '.';
     })
 
