@@ -14,11 +14,12 @@ function subtract (num1, num2){
 function hideFunctionButtons(){
     const functions = document.querySelectorAll('#function');
     functions.forEach((functionButt) => {
-        functionButt.classList.add('hide');
+        functionButt.classList.toggle('hide');
+        hidden = !hidden;
     })
 }
 
-
+let hidden = false;
 let operator = ''
 let operand = ''
 function addButtonListeners () {
@@ -51,7 +52,7 @@ function addButtonListeners () {
         if (display.textContent.length > 0){
             operand = functionButt.textContent;
             operator = display.textContent;
-            display.textContent = '';
+            display.textContent = '0';
             hideFunctionButtons();
             }
         }
@@ -64,7 +65,8 @@ function addButtonListeners () {
         operator = '';
         operand = '';
         functions.forEach(functionButt => functionButt.classList.remove('hide'));
-        period.classList.remove('hide');     
+        period.classList.remove('hide');
+        if (hidden) hideFunctionButtons;
     })
 
     /* Event listener for del button */
