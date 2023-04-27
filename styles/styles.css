@@ -27,7 +27,9 @@ body {
     height: 50px;
     width: 95%;
     background-color: white;
-    
+    font-size: 22px;
+    justify-content: flex-end;
+    align-items: center;   
 }
 
 .button {
