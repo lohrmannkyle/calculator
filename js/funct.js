@@ -23,16 +23,20 @@ function addButtonListeners () {
     const display = document.querySelector('.display');
     const characters = document.querySelectorAll('#character');
     characters.forEach((character) => character.addEventListener('click', () => {
-        display.textContent += character.textContent;
+        if (display.textContent !== '0' && character.textContent !== '0'){
+            display.textContent += character.textContent;
+        }
     }))
 
     const functions = document.querySelectorAll('#function');
     functions.forEach(functionButt => functionButt.addEventListener('click', () => {
+
         if (display.textContent.length > 0){
             operand = functionButt.textContent;
-            oprtator = display.textContent;
+            operator = display.textContent;
             display.textContent = '';
             }
         }
     ))
 }
+addButtonListeners();
