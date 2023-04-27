@@ -94,7 +94,7 @@ function addButtonListeners () {
         if (operator === '') {
             return;
         }
-        functions.classList.remove('hide');
+        hideFunctionButtons();
         switch (operand){
             case '+':
                 display.textContent = add(operator, display.textContent);
