@@ -25,6 +25,7 @@ function addButtonListeners () {
     const display = document.querySelector('.display');
     const characters = document.querySelectorAll('#character');
     characters.forEach((character) => character.addEventListener('click', () => {
+        console.log(display.textContent)
         if (display.textContent === '0' && character.textContent === '0'){
             return;
         }
@@ -67,7 +68,12 @@ function addButtonListeners () {
     /* Event listener for del button */
     const del = document.querySelector('#delete');
     del.addEventListener('click', () => {
-        display.textContent = display.textContent.slice(0, -1);
+        if (display.textContent.length > 1) {
+            display.textContent = display.textContent.slice(0, -1);
+        }
+        else {
+            display.textContent = 0;
+        }
     })
 }
 addButtonListeners();
