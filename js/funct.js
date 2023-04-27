@@ -43,6 +43,9 @@ function addButtonListeners () {
     period.addEventListener('click', () => {
             period.classList.add('hide');
             display.textContent += '.';
+            if (period.classList.contains('hide')){
+                period.classList.remove('hide');
+            }
     })
 
     /* Event listener for | + | - | / | x | */
